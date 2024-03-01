@@ -70,11 +70,18 @@ export const navLinks = [
     path: "/forums",
     title: "forums",
     icon: ChevronDown,
+    data: [
+      "Latest Activity",
+      "What’s New",
+      "Most popular topics",
+      "Write New Post",
+    ],
   },
   {
     path: "/blog",
     title: "blog",
     icon: ChevronDown,
+    data: [" Blog Default", "Blog Classic", "Blog Grid"],
   },
   {
     path: "/photos",
@@ -84,5 +91,6 @@ export const navLinks = [
     path: "/shops",
     title: "shops",
     icon: ChevronDown,
+    data: [" Product", "Cart", "Checkout", "My account"],
   },
 ];

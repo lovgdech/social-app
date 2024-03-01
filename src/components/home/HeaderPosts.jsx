@@ -5,10 +5,10 @@ function HeaderPosts() {
 
   const options = ["All Members", "My Groups", "My Favorites", "Mentions"];
   return (
-    <div className="w-full border flex h-max border-stone-300 pb-1 bg-white items-center rounded-lg cursor-pointer">
+    <div className="w-full border flex h-max border-stone-300 pb-1 gap-2 pl-2 bg-white items-center rounded-lg cursor-pointer">
       {options.map((e, index) => (
         <div
-          className={`p-4 pb-3 border-b-2 ${
+          className={`p-2 pb-3 border-b-2 ${
             activeOption === index ? "border-teal-500" : " border-transparent"
           }`}
           key={index}

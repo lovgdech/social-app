@@ -1,8 +1,8 @@
 import { Navigate, Outlet } from "react-router-dom";
 
 import { useAuth } from "../store/auth-provider";
-import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
+import Sidebar from "../components/root/Sidebar";
+import Header from "../components/root/Header";
 
 function RootLayout() {
   const { isAuth } = useAuth();
@@ -14,11 +14,11 @@ function RootLayout() {
   return (
     <div className="w-screen flex flex-col bg-stone-100">
       <Sidebar />
-      <div className="h-screen overflow-hidden overflow-y-scroll scroll-smooth">
+      <div className="h-screen w-full overflow-hidden">
         <Header />
-        <main className="flex flex-1 mt-5">
-          <div className="w-20 h-20" />
-          <div className="flex-1">
+        <main className="h-full w-full flex flex-1 mt-5">
+          <div className="w-20 h-full" />
+          <div className="w-full h-full max-w-[1300px] mx-auto flex-1 overflow-hidden">
             <Outlet />
           </div>
         </main>

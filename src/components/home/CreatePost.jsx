@@ -5,7 +5,7 @@ function CreatePost() {
   return (
     <div className="w-full border flex h-max border-stone-300 px-4 py-2 bg-white items-center gap-2 rounded-lg cursor-pointer">
       <img
-        className="w-10 h-10 rounded-full object-cover"
+        className="w-9 h-9 rounded-full object-cover"
         src="/assets/images/avatar.jpg"
         alt="avatar"
       />

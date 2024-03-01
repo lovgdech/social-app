@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 import RootLayout from "@/layouts/RootLayout";
 import { HomePage, SigninPage, SignupPage } from "@/pages";
 import AuthLayout from "./layouts/AuthLayout";
