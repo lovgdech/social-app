@@ -1,5 +1,4 @@
 import { Camera } from "lucide-react";
-import React from "react";
 
 function CreatePost() {
   return (

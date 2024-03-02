@@ -1,4 +1,4 @@
-import React from "react";
+import React = require("react");
 import { Moon, Sun, SunMoon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";

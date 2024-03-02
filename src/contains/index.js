@@ -13,7 +13,7 @@ import {
 export const links = [
   {
     title: "My Timeline",
-    path: "/activity",
+    path: "/",
     icon: GanttChartSquare,
   },
   {
@@ -55,7 +55,7 @@ export const links = [
 
 export const navLinks = [
   {
-    path: "/activity",
+    path: "/",
     title: "Activity",
   },
   {

@@ -1,4 +1,3 @@
-import React from "react";
 import { Bell, Search, Store } from "lucide-react";
 import { Link } from "react-router-dom";
 

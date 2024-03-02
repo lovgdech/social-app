@@ -1,4 +1,3 @@
-import React from "react";
 import Blog from "../components/home/Blog";
 import ActiveUser from "../components/home/ActiveUser";
 import CreatePost from "../components/home/CreatePost";
@@ -8,7 +7,7 @@ import Post from "../components/home/Post";
 
 function HomePage() {
   return (
-    <div className="w-full h-full px-5  flex gap-5 justify-between">
+    <div className="w-full h-full px-5 flex gap-5 justify-between">
       <div className="flex-1 w-[300px] h-full overflow-hidden overflow-y-auto flex flex-col gap-2 no-scrollbar">
         <Blog />
       </div>
