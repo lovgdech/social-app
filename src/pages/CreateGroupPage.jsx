@@ -18,7 +18,7 @@ function CreateGroupPage() {
     } else setStepIndex((prev) => prev - 1);
   }
   return (
-    <div className="w-full h-full px-5 overflow-hidden overflow-y-auto pb-36 no-scrollbar">
+    <div className="w-full h-full mt-5 px-5 overflow-hidden overflow-y-auto pb-36 no-scrollbar">
       <div className="w-full flex flex-col gap-2 rounded-lg border border-stone-300  bg-white pb-4">
         <h3 className="text-center font-bold capitalize text-2xl p-4">
           Create a new group

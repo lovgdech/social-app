@@ -7,6 +7,8 @@ import AuthLayout from "./layouts/AuthLayout";
 import { AuthContextProvider } from "./store/auth-provider";
 import GroupPage from "./pages/GroupPage";
 import CreateGroupPage from "./pages/CreateGroupPage";
+import MemberPage from "./pages/MemberPage";
+import ForumPage from "./pages/ForumPage";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
             element: <CreateGroupPage />,
           },
         ],
+      },
+      {
+        path: "members",
+        element: <MemberPage />,
+      },
+      {
+        path: "forums",
+        element: <ForumPage />,
       },
     ],
   },

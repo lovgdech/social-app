@@ -9,7 +9,10 @@ function NavLinkItem({ path, title, Icon, data = [] }) {
   let location = useLocation();
 
   let classes = `flex items-center gap-[2px] font-medium capitalize hover:text-teal-500 transition `;
-  if (location.pathname === "/" && path === "/activity")
+  if (
+    (location.pathname === "/" && path === "/activity") ||
+    location.pathname === path
+  )
     classes += "text-teal-500 ";
 
   if (Icon) {
