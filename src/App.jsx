@@ -1,14 +1,26 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
-import { ThemeProvider } from "@/components/theme/theme-provider";
 import RootLayout from "@/layouts/RootLayout";
-import { HomePage, SigninPage, SignupPage } from "@/pages";
 import AuthLayout from "./layouts/AuthLayout";
+import UserLayout from "./layouts/UserLayout";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 import { AuthContextProvider } from "./store/auth-provider";
-import GroupPage from "./pages/GroupPage";
-import CreateGroupPage from "./pages/CreateGroupPage";
-import MemberPage from "./pages/MemberPage";
-import ForumPage from "./pages/ForumPage";
+import {
+  HomePage,
+  SigninPage,
+  SignupPage,
+  GroupPage,
+  GroupCreatePage,
+  MemberPage,
+  ForumPage,
+  BlogPage,
+  GalleryPage,
+  StorePage,
+  ProfilePage,
+  NotificationPage,
+  UserChatPage,
+  UserPhotoPage,
+} from "@/pages";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +41,7 @@ const router = createBrowserRouter([
           },
           {
             path: "create",
-            element: <CreateGroupPage />,
+            element: <GroupCreatePage />,
           },
         ],
       },
@@ -40,6 +52,40 @@ const router = createBrowserRouter([
       {
         path: "forums",
         element: <ForumPage />,
+      },
+      {
+        path: "blogs",
+        element: <BlogPage />,
+      },
+      {
+        path: "photos",
+        element: <GalleryPage />,
+      },
+      {
+        path: "shops",
+        element: <StorePage />,
+      },
+      {
+        path: "user",
+        element: <UserLayout />,
+        children: [
+          {
+            path: "profile",
+            element: <ProfilePage />,
+          },
+          {
+            path: "notifications",
+            element: <NotificationPage />,
+          },
+          {
+            path: "photos",
+            element: <UserPhotoPage />,
+          },
+          {
+            path: "chats",
+            element: <UserChatPage />,
+          },
+        ],
       },
     ],
   },

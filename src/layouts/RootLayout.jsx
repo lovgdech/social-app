@@ -21,7 +21,9 @@ function RootLayout() {
           <div className="w-[72px] h-full" />
           <div
             className={`w-full h-full ${
-              location.pathname === "/forums" ? "" : "max-w-[1300px]"
+              location.pathname === "/forums" || location.pathname === "/photos"
+                ? ""
+                : "max-w-[1300px]"
             } mx-auto flex-1 overflow-hidden`}
           >
             <Outlet />

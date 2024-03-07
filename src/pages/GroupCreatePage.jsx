@@ -9,7 +9,7 @@ import CreateGroupStepFour from "../components/group/CreateGroupStepFour";
 import CreateGroupStepFive from "../components/group/CreateGroupStepFive";
 import CreateGroupStepSix from "../components/group/CreateGroupStepSix";
 
-function CreateGroupPage() {
+function GroupCreatePage() {
   const [stepIndex, setStepIndex] = useState(1);
 
   function handleStepIndex(status) {
@@ -42,4 +42,4 @@ function CreateGroupPage() {
   );
 }
 
-export default CreateGroupPage;
+export default GroupCreatePage;
