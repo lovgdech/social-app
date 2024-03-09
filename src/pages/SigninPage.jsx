@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import image from "/assets/images/sign-in-img.jpg";

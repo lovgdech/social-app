@@ -12,3 +12,6 @@ export { default as StorePage } from "./StorePage";
 export { default as GalleryPage } from "./GalleryPage";
 export { default as UserPhotoPage } from "./UserPhotoPage";
 export { default as UserChatPage } from "./UserChatPage";
+export { default as UserFriendPage } from "./UserFriendPage";
+export { default as UserGroupPage } from "./UserGroupPage";
+export { default as UserSettingPage } from "./UserSettingPage";

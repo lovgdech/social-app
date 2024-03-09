@@ -21,6 +21,9 @@ import {
   UserChatPage,
   UserPhotoPage,
 } from "@/pages";
+import UserFriendPage from "./pages/UserFriendPage";
+import UserGroupPage from "./pages/UserGroupPage";
+import UserSettingPage from "./pages/UserSettingPage";
 
 const router = createBrowserRouter([
   {
@@ -84,6 +87,18 @@ const router = createBrowserRouter([
           {
             path: "chats",
             element: <UserChatPage />,
+          },
+          {
+            path: "friends",
+            element: <UserFriendPage />,
+          },
+          {
+            path: "groups",
+            element: <UserGroupPage />,
+          },
+          {
+            path: "settings",
+            element: <UserSettingPage />,
           },
         ],
       },

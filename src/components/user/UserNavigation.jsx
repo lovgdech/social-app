@@ -17,7 +17,7 @@ function UserNavigation() {
                 ? "border-b-2 border-teal-500"
                 : "border-b-2 border-transparent"
             }`}
-            to="#"
+            to="/"
           >
             Activity
           </NavLink>
@@ -25,11 +25,11 @@ function UserNavigation() {
         <li>
           <NavLink
             className={`py-4 block px-1 text-sm font-stone-500 ${
-              pathname === ""
+              pathname === "friends"
                 ? "border-b-2 border-teal-500"
                 : "border-b-2 border-transparent"
             }`}
-            to="#"
+            to="friends"
           >
             Friends
           </NavLink>
@@ -42,7 +42,7 @@ function UserNavigation() {
                 ? "border-b-2 border-teal-500"
                 : "border-b-2 border-transparent"
             }`}
-            to="#"
+            to="photos"
           >
             Photos
           </NavLink>
@@ -50,11 +50,11 @@ function UserNavigation() {
         <li>
           <NavLink
             className={`py-4 block px-1 text-sm font-stone-500 ${
-              pathname === ""
+              pathname === "chats"
                 ? "border-b-2 border-teal-500"
                 : "border-b-2 border-transparent"
             }`}
-            to="#"
+            to="chats"
           >
             Messages
           </NavLink>
@@ -62,11 +62,11 @@ function UserNavigation() {
         <li>
           <NavLink
             className={`py-4 block px-1 text-sm font-stone-500 ${
-              pathname === ""
+              pathname === "groups"
                 ? "border-b-2 border-teal-500"
                 : "border-b-2 border-transparent"
             }`}
-            to="#"
+            to="groups"
           >
             Groups
             <span className="text-sm ml-2 px-2 py-1 border border-stone-300 rounded-full">
@@ -81,7 +81,7 @@ function UserNavigation() {
                 ? "border-b-2 border-teal-500"
                 : "border-b-2 border-transparent"
             }`}
-            to="#"
+            to="profile"
           >
             Profile
           </NavLink>
@@ -93,7 +93,7 @@ function UserNavigation() {
                 ? "border-b-2 border-teal-500"
                 : "border-b-2 border-transparent"
             }`}
-            to="#"
+            to="invitations"
           >
             Invitations
           </NavLink>
@@ -105,7 +105,7 @@ function UserNavigation() {
                 ? "border-b-2 border-teal-500"
                 : "border-b-2 border-transparent"
             }`}
-            to="#"
+            to="/forums"
           >
             Forums
           </NavLink>
@@ -113,11 +113,11 @@ function UserNavigation() {
         <li>
           <NavLink
             className={`py-4 block px-1 text-sm font-stone-500 ${
-              pathname === ""
+              pathname === "settings"
                 ? "border-b-2 border-teal-500"
                 : "border-b-2 border-transparent"
             }`}
-            to="#"
+            to="settings"
           >
             Settings
           </NavLink>
@@ -129,7 +129,7 @@ function UserNavigation() {
                 ? "border-b-2 border-teal-500"
                 : "border-b-2 border-transparent"
             }`}
-            to="#"
+            to="points"
           >
             Points
           </NavLink>

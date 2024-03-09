@@ -48,7 +48,7 @@ export const links = [
   },
   {
     title: "Settings",
-    path: "/user/setting",
+    path: "/user/settings",
     icon: Settings,
   },
 ];
