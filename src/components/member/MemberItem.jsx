@@ -6,7 +6,7 @@ import { useState } from "react";
 function MemberItem() {
   const [following, setFollowing] = useState();
   return (
-    <div className="w-full rounded-lg overflow-hidden max-w-[350px] border border-stone-300">
+    <div className="w-full rounded-lg overflow-hidden border mx-auto border-stone-300">
       <img
         className="w-full h-[120px] object-cover"
         src="/assets/images/member-bg.jpg"

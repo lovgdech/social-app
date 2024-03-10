@@ -59,7 +59,7 @@ function UserNavigation() {
             Messages
           </NavLink>
         </li>
-        <li>
+        <li className="hidden md:block">
           <NavLink
             className={`py-4 block px-1 text-sm font-stone-500 ${
               pathname === "groups"
@@ -86,7 +86,7 @@ function UserNavigation() {
             Profile
           </NavLink>
         </li>
-        <li>
+        <li className="hidden lg:block">
           <NavLink
             className={`py-4 block px-1 text-sm font-stone-500 ${
               pathname === ""
@@ -98,7 +98,7 @@ function UserNavigation() {
             Invitations
           </NavLink>
         </li>
-        <li>
+        <li className="hidden md:block">
           <NavLink
             className={`py-4 block px-1 text-sm font-stone-500 ${
               pathname === ""
@@ -110,7 +110,7 @@ function UserNavigation() {
             Forums
           </NavLink>
         </li>
-        <li>
+        <li className="hidden md:block">
           <NavLink
             className={`py-4 block px-1 text-sm font-stone-500 ${
               pathname === "settings"
@@ -122,7 +122,7 @@ function UserNavigation() {
             Settings
           </NavLink>
         </li>
-        <li>
+        <li className="hidden lg:block">
           <NavLink
             className={`py-4 block px-1 text-sm font-stone-500 ${
               pathname === ""
@@ -135,7 +135,7 @@ function UserNavigation() {
           </NavLink>
         </li>
       </ul>
-      <Button variant="ghost" size="icon">
+      <Button className="hidden md:block" variant="ghost" size="icon">
         <MoreHorizontal size="20" />
       </Button>
     </div>

@@ -3,7 +3,7 @@ import React from "react";
 
 function ForumTopic() {
   return (
-    <div className="w-[300px] border border-stone-300 rounded-md px-4 pb-2 bg-white">
+    <div className="w-full border border-stone-300 rounded-md px-4 pb-2 bg-white">
       <h4 className="font-medium my-2 text-lg">Recent topics</h4>
       <ul className="flex flex-col gap-1 list-disc pl-4">
         <li>

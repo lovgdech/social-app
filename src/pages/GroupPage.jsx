@@ -10,11 +10,11 @@ function GroupPage() {
   return (
     <div className="w-full h-full mt-5 overflow-hidden px-5">
       <div className="w-full h-full overflow-y-auto flex flex-col gap-2 no-scrollbar pb-32">
-        <header className="w-full border border-stone-300 flex items-center justify-between px-8 gap-2 bg-white rounded-lg">
+        <header className="w-full border border-stone-300 flex flex-wrap items-center justify-between px-8 pb-2 bg-white rounded-lg">
           <div className="flex items-center gap-4">
             <p
               onClick={() => setActiveOption(1)}
-              className={`py-4 border-b-2 text-sm font-medium cursor-pointer ${
+              className={`py-3 border-b-2 text-sm font-medium cursor-pointer ${
                 activeOption === 1 ? "border-teal-500" : "border-transparent"
               }`}
             >
@@ -22,7 +22,7 @@ function GroupPage() {
             </p>
             <p
               onClick={() => setActiveOption(2)}
-              className={`py-4 border-b-2 text-sm font-medium cursor-pointer ${
+              className={`py-3 border-b-2 text-sm font-medium cursor-pointer ${
                 activeOption === 2 ? "border-teal-500" : "border-transparent"
               }`}
             >
@@ -30,7 +30,7 @@ function GroupPage() {
             </p>
             <p
               onClick={() => navigate("/groups/create")}
-              className={`py-4 border-b-2 text-sm font-medium cursor-pointer ${
+              className={`py-3 border-b-2 text-sm font-medium cursor-pointer ${
                 activeOption === 3 ? "border-teal-500" : "border-transparent"
               }`}
             >
@@ -38,16 +38,16 @@ function GroupPage() {
             </p>
           </div>
 
-          <div className="flex items-center gap-1">
-            <Search className="text-stone-500" size={20} />
+          <div className="flex w-full md:w-[280px] items-center gap-1 border-b bordrer-stone-300">
+            <Search className="text-stone-500 flex-shrink-0" size={20} />
             <input
-              className="p-2 text-base outline-none"
+              className="p-2 text-base outline-none flex-1"
               type="text"
               placeholder="Search..."
             />
           </div>
         </header>
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
           <GroupItem />
           <GroupItem />
           <GroupItem />

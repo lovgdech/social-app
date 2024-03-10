@@ -12,7 +12,7 @@ function GalleryPage() {
       </div>
 
       <div className="w-full max-w-[1300px] mx-auto px-5">
-        <header className="flex items-center gap-4 justify-between py-4">
+        <header className="flex items-center gap-4 justify-between flex-wrap py-4">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2 py-2 cursor-pointer border-b border-teal-500">
               <p>All photos</p>
@@ -25,8 +25,8 @@ function GalleryPage() {
             </div>
           </div>
 
-          <div className="flex items-center gap-4 focus-within:border-teal-500">
-            <p className="flex items-center gap-2 border border-stone-300 rounded-md pl-2">
+          <div className="w-full lg:w-max flex items-center gap-4 focus-within:border-teal-500">
+            <p className="flex items-center gap-2 border border-stone-300 rounded-md pl-2 flex-1">
               <Search fontWeight="thin" size={16} />
               <input
                 className="bg-transparent pr-4 py-2 outline-none"
@@ -36,15 +36,15 @@ function GalleryPage() {
             </p>
             <Button className="flex items-center gap-2 bg-teal-500 hover:bg-teal-600">
               <Upload size={18} />
-              <p>Add photos</p>
+              <p className="hidden sm:inline-flex">Add photos</p>
             </Button>
             <Button className="flex items-center gap-2 bg-teal-500 hover:bg-teal-600">
               <Images size={18} />
-              <p>Create album</p>
+              <p className="hidden sm:inline-flex">Create album</p>
             </Button>
           </div>
         </header>
-        <div className="w-full grid grid-cols-4 gap-2">
+        <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
           <div className="w-full border border-stone-300 rounded-md overflow-hidden">
             <img
               className="w-full h-full max-h-[300px] object-cover"

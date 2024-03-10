@@ -6,7 +6,7 @@ function InboxMemberItem() {
         src="/assets/images/chat-avatar.jpg"
         alt="chat avatar"
       />
-      <div className="ml-2">
+      <div className="hidden lg:inline ml-2">
         <p className="text-base font-medium leading-5">SnowBell</p>
         <span className="text-sm text-stone-500">You: Hello</span>
       </div>

@@ -32,10 +32,10 @@ function UserSettingPage() {
         />
       </div>
       <div className="w-full flex border border-stone-300 items-center rounded-md overflow-hidden mt-4">
-        <button className="w-10 h-10 flex bg-sky-500 text-white items-center justify-center">
+        <button className="w-10 h-10 flex bg-sky-500 text-white items-center justify-center flex-shrink-0">
           <MessageCircleWarning size="20" />
         </button>
-        <p className="px-4">
+        <p className="px-4 text-sm md:text-base">
           Click on the &#34;Generate Password&#34; button to change your
           password.
         </p>

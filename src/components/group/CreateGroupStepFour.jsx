@@ -4,7 +4,7 @@ function CreateGroupStepFour() {
       <h4 className="font-medium text-xl text-black">
         Upload Group profile photo
       </h4>
-      <div className="flex items-center gap-4 py-2">
+      <div className="flex flex-col sm:flex-row items-center gap-4 py-2">
         <img
           className="h-36 w-36 rounded-full"
           src="/assets/images/step-four.png"

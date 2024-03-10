@@ -8,7 +8,10 @@ function ForumItem({ item }) {
       <p className="text-base">{item.sub}</p>
       <div className="w-full border border-stone-300 mt-4 rounded-lg overflow-hidden bg-white">
         {item.data.map((item, i) => (
-          <div className="p-4 flex gap-2 items-center justify-between" key={i}>
+          <div
+            className="p-4 flex flex-col md:flex-row gap-2 items-start md:items-center justify-between hover:bg-stone-200 transition"
+            key={i}
+          >
             <div className="flex gap-2 max-w-[300px] w-full flex-1">
               <MessageCircle className="mt-1 flex-shrink-0" />
               <div>

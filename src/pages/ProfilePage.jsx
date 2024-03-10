@@ -5,8 +5,8 @@ function ProfilePage() {
         <ul className="w-full flex items-center gap-6">
           <li className="py-2 px-1 border-b-2 border-teal-500">View</li>
           <li className="py-2 px-1">Edit</li>
-          <li className="py-2 px-1">Change Profile Photo</li>
-          <li className="py-2 px-1">Change Cover Image</li>
+          <li className="py-2 px-1 hidden sm:inline">Change Profile Photo</li>
+          <li className="py-2 px-1 hidden sm:inline">Change Cover Image</li>
         </ul>
       </div>
 
@@ -19,27 +19,39 @@ function ProfilePage() {
             </h4>
             <ul className="flex flex-col gap-1 text-stone-500">
               <li className="w-full flex gap-2 items-center py-2 font-medium">
-                <p className="min-w-[300px]">First name</p>
+                <p className="min-w-[150px] sm:min-w-[200px] md:min-w-[300px]">
+                  First name
+                </p>
                 <p>Jogn</p>
               </li>
               <li className="w-full flex gap-2 items-center py-2 font-medium">
-                <p className="min-w-[300px]">Last name</p>
+                <p className="min-w-[150px] sm:min-w-[200px] md:min-w-[300px]">
+                  Last name
+                </p>
                 <p>Cena</p>
               </li>
               <li className="w-full flex gap-2 items-center py-2 font-medium">
-                <p className="min-w-[300px]">Nick name</p>
+                <p className="min-w-[150px] sm:min-w-[200px] md:min-w-[300px]">
+                  Nick name
+                </p>
                 <p>John Cena</p>
               </li>
               <li className="w-full flex gap-2 items-center py-2 font-medium">
-                <p className="min-w-[300px]">Gender</p>
+                <p className="min-w-[150px] sm:min-w-[200px] md:min-w-[300px]">
+                  Gender
+                </p>
                 <p>Female</p>
               </li>
               <li className="w-full flex gap-2 items-center py-2 font-medium">
-                <p className="min-w-[300px]">Date of birth</p>
+                <p className="min-w-[150px] sm:min-w-[200px] md:min-w-[300px]">
+                  Date of birth
+                </p>
                 <p>March 10, 1999</p>
               </li>
               <li className="w-full flex gap-2 items-center py-2 font-medium">
-                <p className="min-w-[300px]">Country</p>
+                <p className="min-w-[150px] sm:min-w-[200px] md:min-w-[300px]">
+                  Country
+                </p>
                 <p>VietNam</p>
               </li>
             </ul>
@@ -50,11 +62,15 @@ function ProfilePage() {
             </h4>
             <ul className="flex flex-col gap-1 text-stone-500">
               <li className="w-full flex gap-2 items-center py-2 font-medium">
-                <p className="min-w-[300px]">Job title</p>
+                <p className="min-w-[150px] sm:min-w-[200px] md:min-w-[300px]">
+                  Job title
+                </p>
                 <p>Developer Team</p>
               </li>
               <li className="w-full flex gap-2 items-center py-2 font-medium">
-                <p className="min-w-[300px]">Organization</p>
+                <p className="min-w-[150px] sm:min-w-[200px] md:min-w-[300px]">
+                  Organization
+                </p>
                 <p>Decade Technology</p>
               </li>
             </ul>
@@ -65,7 +81,9 @@ function ProfilePage() {
             </h4>
             <ul className="flex flex-col gap-1 text-stone-500">
               <li className="w-full flex gap-2 items-center py-2 font-medium">
-                <p className="min-w-[300px]">About me</p>
+                <p className="min-w-[150px] sm:min-w-[200px] md:min-w-[300px]">
+                  About me
+                </p>
                 <p>
                   Read exclusive biographies, watch videos & discover
                   fascinating stories about your favorite icons, musicians,
