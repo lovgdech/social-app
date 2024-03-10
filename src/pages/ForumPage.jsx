@@ -69,7 +69,7 @@ function ForumPage() {
               </div>
               <p>MEET LEARNERS AROUND THE WORLD</p>
             </div>
-            <Button className="px-12 rounded-lg flex gap-2 items-center py-6 bg-teal-500 hover:bg-teal-600 transition text-sm">
+            <Button className="px-4 sm:px-12 rounded-lg flex gap-2 items-center py-6 bg-teal-500 hover:bg-teal-600 transition text-sm">
               <p>Write post</p>
               <PenLine size={20} />
             </Button>

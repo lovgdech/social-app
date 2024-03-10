@@ -7,14 +7,14 @@ function UserChatPage() {
   return (
     <div className="relative w-full h-max border border-stone-300 rounded-lg bg-white mt-4 overflow-hidden">
       <div className="w-full flex border-b border-stone-300">
-        <div className="max-w-[350px] md:w-full flex items-center justify-between h-16 px-2">
+        <div className="w-44 sm:max-w-[350px] md:w-full flex items-center justify-between h-16 px-2">
           <input
             className="w-full px-2 py-2 border border-stone-300 bg-stone-50 text-black rounded-full outline-teal-500"
             type="text"
             placeholder="Search member..."
           />
         </div>
-        <div className="flex-1 flex items-center px-2">
+        <div className="flex-1 flex items-center px-2 flex-shrink-0">
           <img
             className="w-10 h-10 rounded-full object-cover"
             src="/assets/images/chat-avatar.jpg"
@@ -28,7 +28,7 @@ function UserChatPage() {
           </div>
         </div>
       </div>
-      <div className="relative w-full h-[520px] flex overflow-hidden">
+      <div className="relative w-full h-[420px] sm:h-[520px] flex overflow-hidden">
         <div className="w-max lg:w-full h-full lg:max-w-[300px] overflow-auto flex flex-col py-2">
           <InboxMemberItem />
           <InboxMemberItem />

@@ -1,5 +1,5 @@
 import { Bell, Menu, Search, Store } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import logo from "/assets/images/logo.png";
 import avatar from "/assets/images/avatar.jpg";
@@ -13,14 +13,25 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useAuth } from "../../store/auth-provider";
 
 function Header() {
+  const { setIsAuth } = useAuth();
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    setIsAuth(false);
+    localStorage.removeItem("social_authentication");
+    alert("Logout success!");
+    navigate("/auth/sign-in");
+  }
+
   return (
-    <div className="w-full h-20 sticky top-0 left-0 bg-white border-b border-slate-300 flex z-10">
-      <div className="w-20 h-20" />
+    <div className="w-full h-16 sm:h-20 sticky top-0 left-0 bg-white border-b border-slate-300 flex z-10">
+      <div className="w-16 h-16 sm:w-20 sm:h-20" />
       <header className="max-w-[1300px] flex-1 h-full px-5 mx-auto flex justify-between items-center">
         <div className="flex items-center gap-5">
-          <Link to="/">
+          <Link className="flex-shrink-0" to="/">
             <img className="h-7 object-contain" src={logo} alt="logo" />
           </Link>
           <div className="items-center relative hidden md:flex">
@@ -136,18 +147,23 @@ function Header() {
                   <li className="cursor-pointer hover:bg-teal-100 hover:text-teal-900 block w-full py-2 px-4 pl-9 transition">
                     Settings
                   </li>
-                  <li className="cursor-pointer hover:bg-teal-100 hover:text-teal-900 block w-full py-2 px-4 pl-9 transition">
+                  <li
+                    className="cursor-pointer hover:bg-teal-100 hover:text-teal-900 block w-full py-2 px-4 pl-9 transition"
+                    onClick={handleLogout}
+                  >
                     Logout
                   </li>
                 </ul>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Button className="rounded-full" size="icon" variant="ghost">
-              <Store size={20} />
-            </Button>
-            <Button className="rounded-full" size="icon" variant="ghost">
-              <Bell size={20} />
-            </Button>
+            <div className="hidden sm:flex items-center gap-2">
+              <Button className="rounded-full" size="icon" variant="ghost">
+                <Store size={20} />
+              </Button>
+              <Button className="rounded-full" size="icon" variant="ghost">
+                <Bell size={20} />
+              </Button>
+            </div>
           </div>
         </div>
       </header>

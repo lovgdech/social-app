@@ -14,7 +14,6 @@ function RootLayout() {
 
   return (
     <div className="w-screen flex flex-col bg-stone-100">
-      {/* <div className="hidden sm:block"></div> */}
       <Sidebar />
       <div className="h-screen w-full overflow-hidden">
         <Header />

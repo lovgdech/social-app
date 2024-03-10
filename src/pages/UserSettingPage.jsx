@@ -1,8 +1,10 @@
 import { MessageCircleWarning } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 function UserSettingPage() {
+  const [value, setValue] = useState("demo@metafans.com");
   return (
     <form className="w-full h-max flex flex-col gap-4 mt-4 bg-white p-4 border border-stone-300 rounded-lg">
       <h3 className="text-center text-xl font-medium">Email & Password</h3>
@@ -28,11 +30,15 @@ function UserSettingPage() {
           type="email"
           id="email"
           name="email"
-          value="demo@metafans.com"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
         />
       </div>
       <div className="w-full flex border border-stone-300 items-center rounded-md overflow-hidden mt-4">
-        <button className="w-10 h-10 flex bg-sky-500 text-white items-center justify-center flex-shrink-0">
+        <button
+          className="w-10 h-10 flex bg-sky-500 text-white items-center justify-center flex-shrink-0"
+          type="button"
+        >
           <MessageCircleWarning size="20" />
         </button>
         <p className="px-4 text-sm md:text-base">

@@ -1,6 +1,6 @@
-import { ChevronLeft, ChevronRight, LogOut, Menu } from "lucide-react";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { ChevronLeft, ChevronRight, LogOut } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { links } from "../../contains";
 import LinkItem from "./LinkItem";
@@ -16,6 +16,7 @@ function Sidebar() {
   const [toggle, setToggle] = useState(false);
   const { setIsAuth } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   function handleToggleMenu() {
     setToggle((prevState) => !prevState);
@@ -28,13 +29,17 @@ function Sidebar() {
     navigate("/auth/sign-in");
   }
 
+  useEffect(() => {
+    setToggle(false);
+  }, [location]);
+
   return (
     <aside
-      className={`absolute top-0 left-0 w-max h-20 sm:h-screen overflow-hidden sm:overflow-y-auto border-r border-stone-300 flex flex-col justify-between z-50 bg-white transition-all no-scrollbar ${
+      className={`absolute top-0 left-0 w-max h-16 sm:h-screen overflow-hidden sm:overflow-y-auto border-r border-stone-300 flex flex-col justify-between z-50 bg-white transition-all no-scrollbar ${
         toggle && "h-screen"
       }`}
     >
-      <div className="w-max ml-5 h-20 flex items-center justify-center flex-shrink-0">
+      <div className="w-max ml-5 h-16 sm:h-20 flex items-center justify-center flex-shrink-0">
         {toggle ? (
           <ChevronLeft
             className="cursor-pointer"

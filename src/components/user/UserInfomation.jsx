@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 function UserNavigation() {
   return (
     <>
-      <div className="w-full  h-[200px] md:h-[280px] relative">
+      <div className="w-full h-[140px] sm:h-[200px] md:h-[280px] relative">
         <img
           className="w-full h-full object-cover"
           src="/assets/images/profile-bg.jpg"
@@ -24,9 +24,9 @@ function UserNavigation() {
           </Button>
         </div>
       </div>
-      <div className="w-full flex items-center bg-white border border-stone-300 gap-4 p-8 py-6">
+      <div className="w-full flex items-center bg-white border border-stone-300 gap-4 p-6 py-4 sm:p-8 sm:py-6">
         <img
-          className="w-32 h-32 rounded-md"
+          className="w-24 h-24 sm:w-32 sm:h-32 rounded-md"
           src="/assets/images/avatar.jpg"
           alt=""
         />
