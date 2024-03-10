@@ -26,22 +26,24 @@ function GalleryPage() {
           </div>
 
           <div className="w-full lg:w-max flex items-center gap-4 focus-within:border-teal-500">
-            <p className="flex items-center gap-2 border border-stone-300 rounded-md pl-2 flex-1">
+            <p className="w-full overflow-hidden sm:w-auto flex items-center gap-2 border border-stone-300 rounded-md pl-2 sm:flex-1">
               <Search fontWeight="thin" size={16} />
               <input
-                className="bg-transparent pr-4 py-2 outline-none"
+                className="bg-transparent pr-2 py-2 outline-none"
                 type="text"
                 placeholder="Search photos"
               />
             </p>
-            <Button className="flex items-center gap-2 bg-teal-500 hover:bg-teal-600">
-              <Upload size={18} />
-              <p className="hidden sm:inline-flex">Add photos</p>
-            </Button>
-            <Button className="flex items-center gap-2 bg-teal-500 hover:bg-teal-600">
-              <Images size={18} />
-              <p className="hidden sm:inline-flex">Create album</p>
-            </Button>
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <Button className="flex items-center gap-2 bg-teal-500 hover:bg-teal-600">
+                <Upload size={18} />
+                <p className="hidden sm:inline-flex">Add photos</p>
+              </Button>
+              <Button className="flex items-center gap-2 bg-teal-500 hover:bg-teal-600">
+                <Images size={18} />
+                <p className="hidden sm:inline-flex">Create album</p>
+              </Button>
+            </div>
           </div>
         </header>
         <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
