@@ -1,4 +1,4 @@
-import { Bell, Search, Store } from "lucide-react";
+import { Bell, Menu, Search, Store } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import logo from "/assets/images/logo.png";
@@ -7,10 +7,12 @@ import NavLinkItem from "./NavLinkItem";
 import { navLinks } from "../../contains";
 import { Button } from "@/components/ui/button";
 import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 function Header() {
   return (
@@ -46,13 +48,36 @@ function Header() {
             ))}
           </ul>
 
+          <div className="block xl:hidden">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon" className="rounded-full">
+                  <Menu />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="p-4 w-[220px]">
+                <ul className="flex flex-col items-center gap-2">
+                  {navLinks.map(({ title, path, icon, data }) => (
+                    <NavLinkItem
+                      key={path}
+                      title={title}
+                      path={path}
+                      Icon={icon}
+                      data={data}
+                    />
+                  ))}
+                </ul>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+
           <div className="flex items-center gap-2">
-            <HoverCard>
-              <HoverCardTrigger asChild>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="rounded-full overflow-hidden"
+                  className="rounded-full overflow-hidden p-0"
                 >
                   <img
                     className="w-10 h-10 object-cover"
@@ -60,23 +85,26 @@ function Header() {
                     alt="avatar"
                   />
                 </Button>
-              </HoverCardTrigger>
-              <HoverCardContent className="p-0">
-                <div className="w-full flex p-4 py-2 gap-2 items-center justify-center bg-stone-100 border-b cursor-pointer">
-                  <img
-                    className="w-12 h-12 rounded-full object-cover"
-                    src={`/assets/images/avatar.jpg`}
-                    alt="blog one"
-                  />
-                  <div className="flex flex-col">
-                    <p className="text-black text-base font-medium">
-                      Hello, Leo Messi
-                    </p>
-                    <span className="text-[12px] text-stone-700">
-                      Community moderator
-                    </span>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-max p-0">
+                <DropdownMenuLabel className="p-0">
+                  <div className="w-full flex p-4 py-2 gap-2 items-center justify-center cursor-pointer">
+                    <img
+                      className="w-12 h-12 rounded-full object-cover"
+                      src={`/assets/images/avatar.jpg`}
+                      alt="blog one"
+                    />
+                    <div className="flex flex-col">
+                      <p className="text-black text-base font-medium">
+                        Hello, Leo Messi
+                      </p>
+                      <span className="text-[12px] text-stone-700">
+                        Community moderator
+                      </span>
+                    </div>
                   </div>
-                </div>
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
                 <ul className="flex flex-col w-full py-2">
                   <li className="cursor-pointer hover:bg-teal-100 hover:text-teal-900 block w-full py-2 px-4 pl-9 transition">
                     Profile
@@ -112,9 +140,8 @@ function Header() {
                     Logout
                   </li>
                 </ul>
-              </HoverCardContent>
-            </HoverCard>
-
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Button className="rounded-full" size="icon" variant="ghost">
               <Store size={20} />
             </Button>

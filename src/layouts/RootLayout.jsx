@@ -14,11 +14,12 @@ function RootLayout() {
 
   return (
     <div className="w-screen flex flex-col bg-stone-100">
+      {/* <div className="hidden sm:block"></div> */}
       <Sidebar />
       <div className="h-screen w-full overflow-hidden">
         <Header />
         <main className="h-full w-full flex flex-1">
-          <div className="w-[72px] h-full" />
+          <div className="hidden sm:block w-[72px] h-full" />
           <div
             className={`w-full h-full ${
               location.pathname === "/forums" || location.pathname === "/photos"

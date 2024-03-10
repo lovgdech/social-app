@@ -1,4 +1,4 @@
-import { LogOut, Menu } from "lucide-react";
+import { ChevronLeft, ChevronRight, LogOut, Menu } from "lucide-react";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -30,10 +30,24 @@ function Sidebar() {
 
   return (
     <aside
-      className={`absolute top-0 left-0 w-max h-screen overflow-hidden overflow-y-auto border-r border-stone-300 flex flex-col justify-between z-50 bg-white transition-all no-scrollbar`}
+      className={`absolute top-0 left-0 w-max h-20 sm:h-screen overflow-hidden sm:overflow-y-auto border-r border-stone-300 flex flex-col justify-between z-50 bg-white transition-all no-scrollbar ${
+        toggle && "h-screen"
+      }`}
     >
       <div className="w-max ml-5 h-20 flex items-center justify-center flex-shrink-0">
-        <Menu className="cursor-pointer" size={30} onClick={handleToggleMenu} />
+        {toggle ? (
+          <ChevronLeft
+            className="cursor-pointer"
+            size={30}
+            onClick={handleToggleMenu}
+          />
+        ) : (
+          <ChevronRight
+            className="cursor-pointer"
+            size={30}
+            onClick={handleToggleMenu}
+          />
+        )}
       </div>
 
       <nav className="flex-1 w-full">

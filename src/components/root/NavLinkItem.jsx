@@ -28,7 +28,7 @@ function NavLinkItem({ path, title, Icon, data = [] }) {
             <Icon className="translate-y-[3px] font-normal" size="18" />
           </NavLink>
         </HoverCardTrigger>
-        <HoverCardContent className="p-0 py-2">
+        <HoverCardContent className="p-2 w-max">
           <ul className="flex flex-col w-full">
             {data?.map((e, i) => (
               <li key={i}>
